@@ -1,0 +1,25 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: newEKSCLUSTER
+  region: ap-south-1
+
+vpc:
+  id: vpc-0d6a71e4834144f50        
+  subnets:
+    public:
+      ap-south-1a: { id: subnet-064e7abefc51f352e }
+      ap-south-1b: { id: subnet-0770a0f146adbd923 }
+    private:
+      ap-south-1a: { id: subnet-0724257fed88ed9e2 }
+      ap-south-1b: { id: subnet-0fee43ae2a9ff750f }
+
+nodeGroups:
+  - name: task-node
+    instanceType: t3.medium
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
+    ssh:
+      allow: true
