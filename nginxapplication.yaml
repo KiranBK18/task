@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: newnginxapp
+  name: new-k-nginxapp
   namespace: argocd
 spec:
   destination:
