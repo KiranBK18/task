@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: newnginxapp 
+    path: nginxchart
     repoURL: https://github.com/KiranBK18/task.git  
     targetRevision: HEAD
     helm:
